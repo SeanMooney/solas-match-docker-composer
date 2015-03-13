@@ -1,0 +1,11 @@
+web:
+  build: .
+  command: python app.py
+  ports:
+   - "80:80"
+  volumes:
+   - .:/code
+  links:
+   - db
+db:
+  image: mariadb
