@@ -19,6 +19,8 @@ RUN cp Common/conf/conf.template.ini Common/conf/conf.ini
 RUN chmod a+rw /repo/SOLAS-Match/Common/conf/conf.ini
 RUN crudini --set /repo/SOLAS-Match/Common/conf/conf.ini site location http://192.168.1.5/
 RUN crudini --set /repo/SOLAS-Match/Common/conf/conf.ini site api http://192.168.1.5/api/
+RUN crudini --set /repo/SOLAS-Match/Common/conf/conf.ini database server "db"
+RUN crudini --set /repo/SOLAS-Match/Common/conf/conf.ini database password ""
 
 #install composer dependecies
 WORKDIR /repo/SOLAS-Match/ui
